@@ -1,13 +1,13 @@
 class Veiculo {
     private String placa;
-    private String estadoIdentificado; // Armazena o estado após a primeira identificação
+    private String estadoIdentificado;
 
     public Veiculo(String placa) {
         if (placa == null || placa.trim().isEmpty()) {
             throw new IllegalArgumentException("A placa não pode ser nula ou vazia.");
         }
-        this.placa = placa.toUpperCase(); // Armazena em maiúsculas para facilitar
-        this.estadoIdentificado = identificarEstadoInterno(); // Identifica e armazena o estado no construtor
+        this.placa = placa.toUpperCase();
+        this.estadoIdentificado = identificarEstadoInterno();
     }
 
     public String getPlaca() {

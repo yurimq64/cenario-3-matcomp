@@ -5,10 +5,6 @@ public class Main {
         Estacionamento meuEstacionamento = new Estacionamento();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Sistema Simplificado de Registro de Veículos (Equipe 4)");
-        System.out.println("Estados Monitorados: Mato Grosso, Mato Grosso do Sul, Tocantins.");
-        System.out.println("-------------------------------------------------------------");
-
         String opcao;
         do {
             System.out.println("\nEscolha uma opção:");
@@ -20,10 +16,9 @@ public class Main {
 
             switch (opcao) {
                 case "1":
-                    System.out.print("Digite a placa do veículo (formato LLLNLNN, ex: BRA1A23): ");
+                    System.out.print("Digite a placa do veículo: ");
                     String placaInput = scanner.nextLine().trim();
 
-                    // Validação básica do formato da placa Mercosul (7 caracteres)
                     if (placaInput.length() == 7 &&
                             Character.isLetter(placaInput.charAt(0)) &&
                             Character.isLetter(placaInput.charAt(1)) &&
@@ -35,7 +30,7 @@ public class Main {
 
                         meuEstacionamento.registrarEntradaVeiculo(placaInput);
                     } else {
-                        System.out.println("Formato de placa inválido. Use LLLNLNN (ex: BRA1A23) com 7 caracteres.");
+                        System.out.println("Formato de placa inválido. Formato correto: LLLNLNN com 7 caracteres.");
                     }
                     break;
                 case "2":
