@@ -52,8 +52,7 @@ class Veiculo {
                 isBetween(iniciais, "RSA", "RSF")) {
             return "Tocantins (TO)";
         }
-
-        return "Estado não monitorado pela equipe";
+        return "Estado não monitorado";
     }
 
     private boolean isBetween(String valor, String inicio, String fim) {
